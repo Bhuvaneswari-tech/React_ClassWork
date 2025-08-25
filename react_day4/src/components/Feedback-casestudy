@@ -1,0 +1,37 @@
+Case Study: Feedback Form in a Learning Management System (LMS)
+
+Scenario
+A company provides online training through its Learning Management System (LMS). 
+After every training session, learners are asked to submit feedback. 
+
+The company wants to build a feedback form in React with the following requirements:
+Required Field Validation
+Fields like Name, Email, Feedback message, and Rating must not be left blank.
+Format Validation
+Email should follow a valid format (e.g., name@example.com).
+Phone number (if collected) should contain only digits and be of standard length.
+Length Validation
+Feedback message should be at least 20 characters and a maximum of 250 characters.
+Pattern Validation
+Name should only contain alphabets and spaces.
+Phone number (if applicable) must follow a 10-digit pattern.
+
+Approach Using React Hooks
+useState for Form Management
+Each input field (name, email, feedback message, rating) will have a state variable.
+An errors state object will be used to store validation error messages dynamically.
+Validation Rules
+On form submit, each field will be validated:
+Required check (e.g., if (!name) show error "Name is required").
+Format check using regular expressions (for email, phone, etc.).
+Length check for feedback message.
+Pattern check for name and phone number.
+useEffect for Real-time Validation
+As the user types, useEffect can re-check specific fields (like email format, message length) and update errors immediately.
+Form Submission
+If all validations pass (errors object is empty), the form data will be submitted to a backend API (e.g., storing in database or sending via email).
+Otherwise, error messages will be displayed below respective fields.
+
+Outcomes
+Positive Experience for Learners: Users get instant feedback if they type wrong values (e.g., invalid email).
+Better Quality of Data: Training team receives clean, properly formatted feedback.

@@ -1,0 +1,17 @@
+Case Study: Public Domain Book Explorer (Using Gutendex API)
+
+
+Scenario:
+You’re building a web app that lets users browse and explore public domain books from Project Gutenberg. 
+
+Users should be able to:
+
+View a list of popular books.
+Search by title or author.
+Filter by language.
+Sort by popularity (i.e., download count).
+All powered by Gutendex, which offers a RESTful JSON API.
+
+Gutendex API Overview
+Endpoint:
+GET https://gutendex.com/books
